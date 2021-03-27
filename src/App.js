@@ -68,11 +68,16 @@ function Cursor() {
 }
 
 const commands = {
+  'help': () => {
+    return ['Here are a list of commands:', `'ls'`, `'website'`, `'more [project]'`]
+  },
   'ls': () => {
     return ['Project: YTsync', 'Project: foodie'];
   },
-  'help': () => {
-    return ['Here are a list of commands:', `'ls'`, `'more [project]'`]
+  'website': () => {
+    return [
+      <>My website:<a className="command-link" href="https://www.janeligio.com">https://www.janeligio.com</a></>,
+    ];
   },
   'more ytsync': () => ['YTsync is web application for those wanting to watch youtube videos together. Features include: live chat, queueing of videos, and a synchronized player.',
   <>Visit the website:<a className="command-link" href="https://modest-benz-608ea8.netlify.app/">https://modest-benz-608ea8.netlify.app/</a></>,
